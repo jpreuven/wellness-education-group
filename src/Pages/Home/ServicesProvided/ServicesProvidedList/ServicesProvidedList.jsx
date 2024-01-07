@@ -15,13 +15,14 @@ export default function ServicesProvidedList() {
             display: "flex",
             flexDirection: "column",
             textAlign: "center",
+            gap: "0.5rem",
           }}
           xs={12}
           sm={5}
           md={4}
           lg={2}
         >
-          <Box
+          <Grid
             sx={{
               display: "flex",
               justifyContent: "center",
@@ -34,15 +35,17 @@ export default function ServicesProvidedList() {
                 borderRadius: "50%",
                 width: "125px",
                 height: "125px",
-                // display: "flex",
-                // justifyContent: "center",
-                // alignItems: "center",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
               {logo}
             </Typography>
-          </Box>
-          <Typography>{title}</Typography>
+          </Grid>
+          <Typography variant="h6" component="h6">
+            {title}
+          </Typography>
           <Typography>{caption}</Typography>
         </Grid>
       );

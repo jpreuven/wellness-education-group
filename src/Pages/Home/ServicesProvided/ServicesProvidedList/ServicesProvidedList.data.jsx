@@ -7,7 +7,7 @@ function schoolLogo() {
       className="icon icon-tabler icon-tabler-school"
       width="100"
       height="100"
-      viewBox="0 -1 24 24"
+      viewBox="0 0 24 24"
       strokeWidth="1.1"
       stroke={theme.palette.primary.tan}
       fill="none"
@@ -28,7 +28,7 @@ function lightBulbLogo() {
       className="icon icon-tabler icon-tabler-bulb"
       width="100"
       height="100"
-      viewBox="0 -1 24 24"
+      viewBox="0 0 24 24"
       strokeWidth="1.1"
       stroke={theme.palette.primary.tan}
       fill="none"
@@ -50,7 +50,7 @@ function heartLogo() {
       className="icon icon-tabler icon-tabler-heart"
       width="100"
       height="100"
-      viewBox="0 -3 24 24"
+      viewBox="0 -1 24 24"
       strokeWidth=".75"
       stroke={theme.palette.primary.tan}
       fill="none"
@@ -70,7 +70,7 @@ function smileLogo() {
       className="icon icon-tabler icon-tabler-mood-smile"
       width="100"
       height="100"
-      viewBox="0 -2 24 24"
+      viewBox="0 0 24 24"
       strokeWidth="1.1"
       stroke={theme.palette.primary.tan}
       fill="none"
@@ -93,7 +93,7 @@ function humanLogo() {
       className="icon icon-tabler icon-tabler-accessible"
       width="100"
       height="100"
-      viewBox="0 -2 24 24"
+      viewBox="0 0 24 24"
       strokeWidth="1.1"
       stroke={theme.palette.primary.tan}
       fill="none"

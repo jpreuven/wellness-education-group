@@ -11,6 +11,7 @@ export const StyledServicesProvidedSectionContainer = styled(Container)(
 
     [theme.breakpoints.up("md")]: {
       maxWidth: "1400px",
+      paddingBlock: "6rem",
     },
     //   [theme.breakpoints.up("lg")]: {
     //     paddingBlock: "4rem",

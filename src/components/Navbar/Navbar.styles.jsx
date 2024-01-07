@@ -13,6 +13,7 @@ export const StyledNavbarOuterGrid = styled(Grid)(({ theme }) => ({
   justifyContent: "space-between",
   alignItems: "center",
   padding: "5px 25px",
+  boxShadow: "0 1.5px 5px gray;",
   [theme.breakpoints.up("xl")]: {
     padding: "10px 55px",
   },

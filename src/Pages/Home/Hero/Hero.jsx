@@ -16,7 +16,7 @@ import useMediaQueries from "../../../utils/mediaqueries.utils";
 import logo from "../../../assets/images/wellness-logo.png";
 
 export default function Hero() {
-  const { isXs } = useMediaQueries();
+  const { isXs, isLg } = useMediaQueries();
 
   return (
     <StyledHeroBackgroundWrapper>
@@ -25,7 +25,7 @@ export default function Hero() {
           <StyledHeroTextHeader>
             Welcome to Wellness and Education Group
           </StyledHeroTextHeader>
-          <StyledHeroTextContent>
+          <StyledHeroTextContent variant={isLg ? "body1" : "body2"}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
             sed ratione ullam vitae. Tempore eaque dolorum ab? Illum fuga
             placeat maiores expedita in voluptas blanditiis quo laborum alias

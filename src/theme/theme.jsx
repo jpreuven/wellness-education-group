@@ -3,10 +3,12 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#1c5300", // Change the primary color
+      main: "#195140", // Change the primary color
+      tan: "#ffe8bd", // Change the secondary color
     },
     secondary: {
-      main: "#FFE157", // Change the secondary color
+      main: "#0c5733", // Change the secondary color
+      tan: "#fcedd0", // Change the secondary color
     },
   },
   breakpoints: {

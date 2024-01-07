@@ -38,6 +38,7 @@ export default function ServicesProvidedList() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                boxShadow: "0px 5px 5px gray",
               }}
             >
               {logo}

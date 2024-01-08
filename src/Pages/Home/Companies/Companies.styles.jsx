@@ -27,8 +27,26 @@ export const StyledCompaniesSectionContainer = styled(Container)(
     //   [theme.breakpoints.up("xl")]: {
     //     minHeight: "650px",
     //   },
-    //   [theme.breakpoints.up("xxl")]: {
-    //     minHeight: "850px",
-    //   },
+    // [theme.breakpoints.up("xxl")]: {
+    //   minHeight: "850px",
+    // },
   })
 );
+
+export const StyledCompaniesImage = styled(Box)(({ theme }) => ({
+  width: "200px",
+  height: "200px",
+  position: "relative",
+  // right: -2000,
+  // transform: "translateY(1000px)",
+  // display: "none",
+  // transition: "transform 0.3s ease",
+  // [theme.breakpoints.up("xs")]: {
+  //   transform: "translateY(0)",
+  //   transition: "transform 0.3s ease",
+  // },
+
+  // position: "static",
+  // right: 0,
+  // transition: "right 0.3s ease, position 0.3s ease",
+}));

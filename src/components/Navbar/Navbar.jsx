@@ -1,47 +1,14 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import React from "react";
-import useMediaQueries from "../../utils/mediaqueries.utils";
-import {
-  StyledNavbarOuterGrid,
-  StyledNavbarLinksGrid,
-  StyledNavbarLinks,
-  StyledNavbarBoxLinks,
-} from "./Navbar.styles";
+import { StyledNavbarOuterGrid, StyledNavbarLinksGrid } from "./Navbar.styles";
+import NavbarData from "./Navbar.data";
 
 export default function Navbar() {
-  const { isLg, isXl } = useMediaQueries();
   return (
     <StyledNavbarOuterGrid id="navbar-container">
       <Grid sx={{ flexShrink: "0" }}>Wellness Logo</Grid>
       <StyledNavbarLinksGrid>
-        <StyledNavbarLinks>
-          <StyledNavbarBoxLinks>
-            <Typography sx={{ fontSize: isXl ? "18px" : "14px" }}>
-              About Us
-            </Typography>
-          </StyledNavbarBoxLinks>
-        </StyledNavbarLinks>
-        <StyledNavbarLinks style={{ textDecoration: "none" }}>
-          <StyledNavbarBoxLinks>
-            <Typography sx={{ fontSize: isXl ? "18px" : "14px" }}>
-              Services
-            </Typography>
-          </StyledNavbarBoxLinks>
-        </StyledNavbarLinks>
-        <StyledNavbarLinks style={{ textDecoration: "none" }}>
-          <StyledNavbarBoxLinks>
-            <Typography sx={{ fontSize: isXl ? "18px" : "14px" }}>
-              Contact Us
-            </Typography>
-          </StyledNavbarBoxLinks>
-        </StyledNavbarLinks>
-        <StyledNavbarLinks style={{ textDecoration: "none" }}>
-          <StyledNavbarBoxLinks>
-            <Typography sx={{ fontSize: isXl ? "18px" : "14px" }}>
-              Internship Opportunities
-            </Typography>
-          </StyledNavbarBoxLinks>
-        </StyledNavbarLinks>
+        <NavbarData />
       </StyledNavbarLinksGrid>
     </StyledNavbarOuterGrid>
   );

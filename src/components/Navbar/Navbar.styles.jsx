@@ -13,7 +13,7 @@ export const StyledNavbarOuterGrid = styled(Grid)(({ theme }) => ({
   justifyContent: "space-between",
   alignItems: "center",
   padding: "5px 25px",
-  boxShadow: "0 1.5px 5px gray;",
+  boxShadow: "0 2px 5px gray;",
   [theme.breakpoints.up("xl")]: {
     padding: "10px 55px",
   },
@@ -24,7 +24,7 @@ export const StyledNavbarLinksGrid = styled(Grid)(({ theme }) => ({
   alignItems: "center",
   gap: ".5rem",
   [theme.breakpoints.up("xl")]: {
-    gap: "1rem",
+    gap: "0.75rem",
   },
 }));
 

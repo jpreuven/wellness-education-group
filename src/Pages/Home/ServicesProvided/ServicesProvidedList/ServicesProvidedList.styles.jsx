@@ -33,5 +33,12 @@ export const StyledServicesProvidedListLogoTypography = styled(Typography)(
     justifyContent: "center",
     alignItems: "center",
     boxShadow: "0px 5px 5px gray",
+    transform: "translateY(0)",
+    transition: "transform 0.3s ease",
+
+    "&:hover": {
+      transform: "translateY(-10px)",
+      transition: "transform 0.3s ease",
+    },
   })
 );

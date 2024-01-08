@@ -1,0 +1,11 @@
+.slide-in-image {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 1.75s cubic-bezier(0.25, 0.1, 0.25, 1),
+    opacity 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.not-slide-in-image {
+  opacity: 0;
+  transform: translateX(1500px);
+}

@@ -5,10 +5,14 @@ const theme = createTheme({
     primary: {
       main: "#195140", // Change the primary color
       tan: "#ffe8bd", // Change the secondary color
+      // main: "#ffe8bd", // Change the primary color
+      // tan: "#195140", // Change the secondary color
     },
     secondary: {
       main: "#0c5733", // Change the secondary color
       tan: "#fcedd0", // Change the secondary color
+      // main: "#fcedd0", // Change the secondary color
+      // tan: "#0c5733", // Change the secondary color
     },
   },
   breakpoints: {

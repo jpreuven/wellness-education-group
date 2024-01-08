@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 export const StyledNavbarOuterGrid = styled(Grid)(({ theme }) => ({
   width: "100%",
   minHeight: "75px",
-  // backgroundColor: theme.palette.primary.tan,
   backgroundColor: "white",
   position: "sticky",
   top: 0,
@@ -42,8 +41,22 @@ export const StyledNavbarBoxLinks = styled(Box)(({ theme }) => ({
   color: theme.palette.primary.main,
   borderRadius: "10px",
   "&:hover": {
-    // background: `linear-gradient(to bottom, ${theme.palette.primary.tan},${theme.palette.secondary.tan})`,
-    // background: "#f9d89c", // Change the secondary color
     background: "rgba(25, 81, 64, 0.1)", // Change the primary color
+  },
+}));
+
+export const StyledMobileNavbarBoxLinks = styled(Box)(({ theme }) => ({
+  minHeight: "35px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  color: theme.palette.primary.main,
+  borderRadius: "5px",
+  borderTop: `1px solid ${theme.palette.primary.main}`,
+  "&:hover": {
+    background: "rgba(25, 81, 64, 0.1)",
+  },
+  "&:click": {
+    background: "rgba(25, 81, 64, 0.1)",
   },
 }));

@@ -21,7 +21,6 @@ export default function CompaniesList() {
   const logosJSX = logos.map((logo, index) => {
     return (
       <StyledCompaniesImage
-        item
         key={index}
         className={`${
           yCoordinate

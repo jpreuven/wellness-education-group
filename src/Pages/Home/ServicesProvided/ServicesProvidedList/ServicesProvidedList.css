@@ -1,0 +1,9 @@
+.services-provided-slidein {
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+.not-services-provided-slidein {
+  opacity: 0;
+  transform: translateY(100px);
+}

@@ -11,7 +11,6 @@ export default function Home() {
       <Hero />
       <ServicesProvided />
       <StyledDivider />
-      {/* <Divider /> */}
       <Companies />
     </StyledMainPageContainer>
   );

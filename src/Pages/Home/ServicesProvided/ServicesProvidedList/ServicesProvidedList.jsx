@@ -1,7 +1,5 @@
-import { Grid, Typography } from "@mui/material";
-import { Box } from "@mui/system";
-import React from "react";
-import theme from "../../../../theme/theme";
+import { Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import { servicesProvidedListData } from "./ServicesProvidedList.data";
 import {
   StyledServicesProvidedListOuterGrid,
@@ -9,13 +7,23 @@ import {
   StyledServicesProvidedListLogoGrid,
   StyledServicesProvidedListLogoTypography,
 } from "./ServicesProvidedList.styles";
+import "./ServicesProvidedList.css";
 
 export default function ServicesProvidedList() {
+  const [pageLoaded, setPageLoaded] = useState(false);
+  useEffect(() => {
+    setPageLoaded(true);
+  }, []);
   const servicesProvidedList = servicesProvidedListData.map(
     ({ logo, title, caption }, index) => {
       return (
         <StyledServicesProvidedListInnerGrid
           item
+          className={`${
+            pageLoaded
+              ? "services-provided-slidein"
+              : "not-services-provided-slidein"
+          }`}
           key={index}
           xs={12}
           sm={5}

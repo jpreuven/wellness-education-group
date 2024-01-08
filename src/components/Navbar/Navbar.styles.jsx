@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 export const StyledNavbarOuterGrid = styled(Grid)(({ theme }) => ({
   width: "100%",
   minHeight: "75px",
-  backgroundColor: theme.palette.primary.tan,
+  // backgroundColor: theme.palette.primary.tan,
+  backgroundColor: "white",
   position: "sticky",
   top: 0,
   zIndex: 1,

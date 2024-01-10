@@ -6,6 +6,8 @@ export const StyledServicesProvidedSectionContainer = styled(Container)(
     display: "flex",
     overflow: "visible",
     paddingBlock: "4rem",
+    flexDirection: "column",
+    gap: "5rem",
 
     // Tenatative //
 
@@ -26,3 +28,11 @@ export const StyledServicesProvidedSectionContainer = styled(Container)(
     //   },
   })
 );
+
+export const StyledServicesProvidedOuterGrid = styled(Grid)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  textAlign: "center",
+  gap: "3rem",
+}));

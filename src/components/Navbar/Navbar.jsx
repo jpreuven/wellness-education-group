@@ -8,7 +8,6 @@ import useMediaQueries from "../../utils/mediaqueries.utils";
 export default function Navbar() {
   const [checked, SetChecked] = useState(false);
   const { isMd } = useMediaQueries();
-  console.log(checked);
   if (isMd) {
     return (
       <StyledNavbarOuterGrid id="navbar-container">

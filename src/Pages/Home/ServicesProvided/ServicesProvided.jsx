@@ -1,6 +1,9 @@
 import { Grid, Typography } from "@mui/material";
 import React from "react";
-import { StyledServicesProvidedSectionContainer } from "./ServicesProvided.styles";
+import {
+  StyledServicesProvidedSectionContainer,
+  StyledServicesProvidedOuterGrid,
+} from "./ServicesProvided.styles";
 import ServicesProvidedList from "./ServicesProvidedList/ServicesProvidedList";
 
 export default function ServicesProvided() {
@@ -8,17 +11,8 @@ export default function ServicesProvided() {
     <StyledServicesProvidedSectionContainer
       component={"section"}
       id={"services-provided-section"}
-      sx={{ display: "flex", flexDirection: "column", gap: "5rem" }}
     >
-      <Grid
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          textAlign: "center",
-          gap: "3rem",
-        }}
-      >
+      <StyledServicesProvidedOuterGrid>
         <Typography sx={{ fontSize: "24px" }}>Services Provided</Typography>
         <Typography sx={{ fontSize: "18px", maxWidth: "700px" }}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
@@ -26,7 +20,7 @@ export default function ServicesProvided() {
           consectetur sunt architecto deserunt nostrum veritatis. Tempore,
           nobis!
         </Typography>
-      </Grid>
+      </StyledServicesProvidedOuterGrid>
       <ServicesProvidedList />
     </StyledServicesProvidedSectionContainer>
   );

@@ -6,7 +6,7 @@ export const StyledMobileNavbarOuterGrid = styled(Grid)(({ theme }) => ({
   position: "absolute",
   right: "0",
   left: "0",
-  top: "60px",
+  top: "75px",
   backgroundColor: "white",
   textAlign: "center",
   boxShadow: "0px 2px 3px lightgray",

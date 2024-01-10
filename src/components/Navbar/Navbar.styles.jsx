@@ -46,13 +46,13 @@ export const StyledNavbarBoxLinks = styled(Box)(({ theme }) => ({
 }));
 
 export const StyledMobileNavbarBoxLinks = styled(Box)(({ theme }) => ({
-  minHeight: "35px",
+  minHeight: "40px",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   color: theme.palette.primary.main,
   borderRadius: "5px",
-  borderTop: `1px solid ${theme.palette.primary.main}`,
+  borderTop: `1px solid lightgray`,
   "&:hover": {
     background: "rgba(25, 81, 64, 0.1)",
   },

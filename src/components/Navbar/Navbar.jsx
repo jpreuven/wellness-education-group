@@ -49,7 +49,7 @@ export default function Navbar() {
         >
           &#9776;
         </InputLabel>
-        {checked ? <MobileNavbar sx={{}} /> : null}
+        {checked ? <MobileNavbar /> : null}
       </Grid>
     );
   }

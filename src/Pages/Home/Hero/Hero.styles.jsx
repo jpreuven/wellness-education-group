@@ -10,8 +10,9 @@ export const StyledHeroSectionContainer = styled(Container)(({ theme }) => ({
 
   [theme.breakpoints.down("sm")]: {
     // maxWidth: "100%",
-    paddingInline: ".5rem",
+    paddingInline: "1rem",
   },
+
   //   [theme.breakpoints.up("lg")]: {
   //     paddingBlock: "4rem",
   //     minHeight: "650px",
@@ -61,24 +62,21 @@ export const StyledHeroImage = styled("img")(({ theme }) => ({
   width: "200px",
   [theme.breakpoints.up("sm")]: {
     paddingTop: "10px",
-    // width: "250px",
-
     width: "400px",
   },
-  // [theme.breakpoints.up("md")]: {
-  //   paddingTop: "10px",
-  //   // width: "250px",
-
-  //   width: "400px",
-  // },
+  "@media (max-width: 250px)": {
+    width: "90%",
+  },
 }));
 
 export const StyledHeroTextHeader = styled(Typography)(({ theme }) => ({
-  fontSize: "30px",
+  fontSize: "24px",
   fontWeight: "bolder",
   paddingBottom: "29px",
-
   color: theme.palette.primary.tan,
+  [theme.breakpoints.up("sm")]: {
+    fontSize: "30px",
+  },
 }));
 
 export const StyledHeroTextContent = styled(Typography)(({ theme }) => ({

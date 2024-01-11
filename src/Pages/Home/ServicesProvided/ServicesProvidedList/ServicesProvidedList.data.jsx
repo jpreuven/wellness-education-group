@@ -4,15 +4,15 @@ function schoolLogo() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-book"
+      className="icon icon-tabler icon-tabler-book"
       width="100"
       height="100"
       viewBox="0 0 24 24"
-      stroke-width=".75"
+      strokeWidth=".75"
       stroke={theme.palette.primary.tan}
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
@@ -69,15 +69,15 @@ function heartLogo2() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-hearts"
+      className="icon icon-tabler icon-tabler-hearts"
       width="100"
       height="100"
       viewBox="0 0 24 24"
-      stroke-width=".75"
+      strokeWidth=".75"
       stroke={theme.palette.primary.tan}
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M14.017 18l-2.017 2l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 0 1 8.153 5.784" />
@@ -128,15 +128,15 @@ function telephoneLogo() {
     // </svg>
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-phone-call"
+      className="icon icon-tabler icon-tabler-phone-call"
       width="95"
       height="95"
       viewBox="0 0 24 24"
-      stroke-width=".75"
+      strokeWidth=".75"
       stroke={theme.palette.primary.tan}
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />

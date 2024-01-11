@@ -6,12 +6,12 @@ export const StyledHeroSectionContainer = styled(Container)(({ theme }) => ({
   overflow: "visible",
   paddingBlock: "4rem",
 
-  // Tenatative //
-  minHeight: "625px",
+  // maxWidth: "550px",
 
-  //   [theme.breakpoints.up("md")]: {
-  //     minHeight: "625px",
-  //   },
+  [theme.breakpoints.down("sm")]: {
+    // maxWidth: "100%",
+    paddingInline: ".5rem",
+  },
   //   [theme.breakpoints.up("lg")]: {
   //     paddingBlock: "4rem",
   //     minHeight: "650px",
@@ -36,7 +36,11 @@ export const StyledHeroGridContainer = styled(Grid)(({ theme }) => ({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
+  textAlign: "center",
   gap: "2rem",
+  [theme.breakpoints.up("lg")]: {
+    textAlign: "left",
+  },
 }));
 
 export const StyledHeroGridTextItem = styled(Grid)(({ theme }) => ({
@@ -53,13 +57,27 @@ export const StyledHeroGridImageItem = styled(Grid)(({ theme }) => ({
   },
 }));
 
-export const StyledHeroImage = styled(Grid)(({ theme }) => ({
-  objectFit: "cover",
+export const StyledHeroImage = styled("img")(({ theme }) => ({
+  width: "200px",
+  [theme.breakpoints.up("sm")]: {
+    paddingTop: "10px",
+    // width: "250px",
+
+    width: "400px",
+  },
+  // [theme.breakpoints.up("md")]: {
+  //   paddingTop: "10px",
+  //   // width: "250px",
+
+  //   width: "400px",
+  // },
 }));
 
 export const StyledHeroTextHeader = styled(Typography)(({ theme }) => ({
-  fontSize: "24px",
+  fontSize: "30px",
   fontWeight: "bolder",
+  paddingBottom: "29px",
+
   color: theme.palette.primary.tan,
 }));
 
@@ -67,6 +85,9 @@ export const StyledHeroTextContent = styled(Typography)(({ theme }) => ({
   fontSize: "16px",
   maxWidth: "550px",
   color: theme.palette.secondary.tan,
+  [theme.breakpoints.up("sm")]: {
+    fontSize: "20px",
+  },
 }));
 
 export const StyledHeroButton = styled(Button)(({ theme }) => ({
@@ -79,5 +100,21 @@ export const StyledHeroButton = styled(Button)(({ theme }) => ({
   "&:hover": {
     color: theme.palette.primary.main,
     backgroundColor: theme.palette.primary.tan,
+  },
+}));
+
+export const StyledHeroContentGrid = styled(Grid)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-around",
+}));
+
+export const StyledHeroTextGrid = styled(Grid)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "flex-start",
+
+  [theme.breakpoints.up("sm")]: {
+    alignItems: "center",
   },
 }));

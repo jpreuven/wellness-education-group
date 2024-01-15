@@ -4,6 +4,7 @@ import Hero from "./Hero/Hero";
 import ServicesProvided from "./ServicesProvided/ServicesProvided";
 import Companies from "./Companies/Companies";
 import { StyledInnerDivider } from "../../index.styles";
+import EmailForm from "../../components/Form/EmailForm";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ServicesProvided />
       <StyledInnerDivider />
       <Companies />
+      <EmailForm />
     </StyledMainPageContainer>
   );
 }

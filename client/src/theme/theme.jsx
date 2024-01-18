@@ -25,6 +25,15 @@ const theme = createTheme({
       // You can add more breakpoints if you need
     },
   },
+  typography: {
+    fontFamily: "Lora, serif",
+    fontSize: 16,
+    h1: {
+      fontSize: "32px",
+      fontWeight: "550",
+    },
+    // Customize other variants as needed
+  },
   // Additional theme configuration options can be added here
 });
 

@@ -7,33 +7,48 @@ import {
 } from "./Navbar.styles";
 
 const data = [
-  "About us",
-  "Services",
-  "Contact Us",
-  "Internship Opportunities",
-  "Location",
+  {
+    title: "About us",
+    link: "/about",
+  },
+  {
+    title: "Services",
+    link: "/services",
+  },
+  {
+    title: "Contact Us",
+    link: "/contact-us",
+  },
+  {
+    title: "Internship Opportunities",
+    link: "/internships",
+  },
+  {
+    title: "Location",
+    link: "/location",
+  },
 ];
 
 function NavbarDataJSX() {
   const { isMd, isXl } = useMediaQueries();
   if (isMd) {
-    return data.map((data, index) => {
+    return data.map(({ title, link }, index) => {
       return (
-        <StyledNavbarLinks key={index}>
+        <StyledNavbarLinks key={index} to={link}>
           <StyledNavbarBoxLinks>
             <Typography sx={{ fontSize: isXl ? "18px" : "14px" }}>
-              {data}
+              {title}
             </Typography>
           </StyledNavbarBoxLinks>
         </StyledNavbarLinks>
       );
     });
   } else {
-    return data.map((data, index) => {
+    return data.map(({ title, link }, index) => {
       return (
-        <StyledNavbarLinks key={index}>
+        <StyledNavbarLinks key={index} to={link}>
           <StyledMobileNavbarBoxLinks>
-            <Typography>{data}</Typography>
+            <Typography>{title}</Typography>
           </StyledMobileNavbarBoxLinks>
         </StyledNavbarLinks>
       );

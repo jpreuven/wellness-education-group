@@ -4,6 +4,8 @@ import { StyledNavbarOuterGrid, StyledNavbarLinksGrid } from "./Navbar.styles";
 import NavbarData from "./Navbar.data";
 import MobileNavbar from "./MobileNavbar/MobileNavbar";
 import useMediaQueries from "../../utils/mediaqueries.utils";
+import { Link } from "react-router-dom";
+import theme from "../../theme/theme";
 
 export default function Navbar() {
   const [checked, SetChecked] = useState(false);
@@ -11,7 +13,17 @@ export default function Navbar() {
   if (isMd) {
     return (
       <StyledNavbarOuterGrid id="navbar-container">
-        <Grid sx={{ flexShrink: "0" }}>Wellness Logo</Grid>
+        <Grid sx={{ flexShrink: "0" }}>
+          <Link
+            style={{
+              textDecoration: "none",
+              color: theme.palette.primary.main,
+            }}
+            to={"/"}
+          >
+            Wellness Logo
+          </Link>
+        </Grid>
         <StyledNavbarLinksGrid>
           <NavbarData />
         </StyledNavbarLinksGrid>

@@ -3,24 +3,37 @@ import { Box, Button, Container, Grid, Typography } from "@mui/material";
 
 export const StyledServiceListOuterGrid = styled(Grid)(({ theme }) => ({
   display: "flex",
-  flexDirection: "row",
-  justifyContent: "space-between",
-  [theme.breakpoints.down("md")]: {
-    flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  "@media (min-width: 715px)": {
+    justifyContent: "space-between",
   },
 }));
 
-export const StyledServiceListImageGrid = styled(Grid)(({ theme }) => ({
-  width: "350px",
-  [theme.breakpoints.down("md")]: {
-    order: "0 !important",
-    paddingBottom: "16px",
+export const StyledServiceListImageBox = styled(Box)(({ theme }) => ({
+  maxWidth: "300px",
+  "@media (min-width: 786px)": {
+    maxWidth: "325px",
+  },
+  "@media (min-width: 900px)": {
+    maxWidth: "350px",
+  },
+  "@media (min-width: 950px)": {
+    maxWidth: "375px",
   },
 }));
+
+export const StyledServiceListImageGrid = styled(Grid)(({ theme }) => ({}));
 
 export const StyledServiceListTextGrid = styled(Grid)(({ theme }) => ({
-  width: "500px",
-  [theme.breakpoints.down("md")]: {
-    paddingBottom: "16px",
+  maxWidth: "300px",
+  "@media (min-width: 600px)": {
+    minWidth: "300px",
+  },
+  "@media (min-width: 886px)": {
+    maxWidth: "400px",
+  },
+  "@media (min-width: 950px)": {
+    maxWidth: "500px",
   },
 }));

@@ -9,8 +9,9 @@ export default function Home() {
   return (
     <StyledMainPageContainer id="home-page-container">
       <Hero />
+      {/* <StyledInnerDivider /> */}
       <ServicesProvided />
-      <StyledInnerDivider />
+      {/* <StyledInnerDivider /> */}
       <Companies />
     </StyledMainPageContainer>
   );

@@ -8,6 +8,7 @@ import {
   StyledServicesProvidedListLogoTypography,
 } from "./ServicesProvidedList.styles";
 import "./ServicesProvidedList.css";
+import theme from "../../../../theme/theme";
 
 export default function ServicesProvidedList() {
   const [pageLoaded, setPageLoaded] = useState(false);
@@ -35,10 +36,16 @@ export default function ServicesProvidedList() {
               {logo}
             </StyledServicesProvidedListLogoTypography>
           </StyledServicesProvidedListLogoGrid>
-          <Typography variant="h6" component="h6">
+          <Typography
+            variant="h6"
+            component="h6"
+            sx={{ color: theme.palette.secondary.tan }}
+          >
             {title}
           </Typography>
-          <Typography>{caption}</Typography>
+          <Typography sx={{ color: theme.palette.secondary.tan }}>
+            {caption}
+          </Typography>
         </StyledServicesProvidedListInnerGrid>
       );
     }

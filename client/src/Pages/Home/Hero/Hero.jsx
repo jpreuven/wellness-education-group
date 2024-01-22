@@ -15,6 +15,7 @@ import {
 import useMediaQueries from "../../../utils/mediaqueries.utils";
 
 import logo from "../../../assets/images/wellness-logo.png";
+import theme from "../../../theme/theme";
 
 export default function Hero() {
   const { isXs, isLg, isSm } = useMediaQueries();
@@ -40,7 +41,10 @@ export default function Hero() {
               lg={5}
             >
               <StyledHeroTextHeader>
-                Welcome to Wellness and Education Group
+                <span style={{ color: theme.palette.primary.main }}>
+                  Welcome {""}
+                </span>
+                to Wellness and Education Group
               </StyledHeroTextHeader>
               <StyledHeroTextContent variant={isLg ? "body1" : "body2"}>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.

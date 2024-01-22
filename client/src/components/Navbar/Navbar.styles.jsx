@@ -14,6 +14,7 @@ export const StyledNavbarOuterGrid = styled(Grid)(({ theme }) => ({
   alignItems: "center",
   padding: "5px 25px",
   boxShadow: "0 2px 5px gray;",
+  background: `linear-gradient(to bottom, ${theme.palette.primary.main},${theme.palette.secondary.main})`,
   [theme.breakpoints.up("xl")]: {
     padding: "10px 55px",
   },
@@ -50,7 +51,8 @@ export const StyledMobileNavbarBoxLinks = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  color: theme.palette.primary.main,
+  // color: theme.palette.primary.main,
+  background: `linear-gradient(to bottom, ${theme.palette.primary.main},${theme.palette.secondary.main})`,
   borderRadius: "5px",
   borderTop: `1px solid lightgray`,
   "&:hover": {

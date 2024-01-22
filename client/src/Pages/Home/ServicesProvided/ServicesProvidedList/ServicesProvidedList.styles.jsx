@@ -25,7 +25,8 @@ export const StyledServicesProvidedListLogoGrid = styled(Grid)(({ theme }) => ({
 
 export const StyledServicesProvidedListLogoTypography = styled(Typography)(
   ({ theme }) => ({
-    background: `linear-gradient(to top, ${theme.palette.primary.main},${theme.palette.secondary.main})`,
+    // background: `linear-gradient(to top, ${theme.palette.primary.main},${theme.palette.secondary.main})`,
+    background: `linear-gradient(to top, ${theme.palette.primary.tan},${theme.palette.secondary.tan})`,
     borderRadius: "50%",
     width: "125px",
     height: "125px",

@@ -1,4 +1,5 @@
 import { Typography } from "@mui/material";
+import theme from "../../theme/theme";
 import useMediaQueries from "../../utils/mediaqueries.utils";
 import {
   StyledNavbarLinks,
@@ -20,7 +21,7 @@ const data = [
     link: "/contact-us",
   },
   {
-    title: "Internship Opportunities",
+    title: "Internships",
     link: "/internships",
   },
   {
@@ -36,7 +37,12 @@ function NavbarDataJSX() {
       return (
         <StyledNavbarLinks key={index} to={link}>
           <StyledNavbarBoxLinks>
-            <Typography sx={{ fontSize: isXl ? "18px" : "14px" }}>
+            <Typography
+              sx={{
+                fontSize: isXl ? "18px" : "14px",
+                color: theme.palette.primary.tan,
+              }}
+            >
               {title}
             </Typography>
           </StyledNavbarBoxLinks>
@@ -48,7 +54,9 @@ function NavbarDataJSX() {
       return (
         <StyledNavbarLinks key={index} to={link}>
           <StyledMobileNavbarBoxLinks>
-            <Typography>{title}</Typography>
+            <Typography sx={{ color: theme.palette.primary.tan }}>
+              {title}
+            </Typography>
           </StyledMobileNavbarBoxLinks>
         </StyledNavbarLinks>
       );

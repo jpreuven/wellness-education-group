@@ -27,7 +27,7 @@ export const StyledHeroSectionContainer = styled(Container)(({ theme }) => ({
 }));
 
 export const StyledHeroBackgroundWrapper = styled(Box)(({ theme }) => ({
-  background: `linear-gradient(to bottom, ${theme.palette.primary.main},${theme.palette.secondary.main})`,
+  // background: `linear-gradient(to bottom, ${theme.palette.primary.main},${theme.palette.secondary.main})`,
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
 }));
@@ -64,6 +64,10 @@ export const StyledHeroImage = styled("img")(({ theme }) => ({
     paddingTop: "10px",
     width: "400px",
   },
+  [theme.breakpoints.up("lg")]: {
+    width: "100%",
+    height: "100%",
+  },
   "@media (max-width: 250px)": {
     width: "90%",
   },
@@ -73,7 +77,9 @@ export const StyledHeroTextHeader = styled(Typography)(({ theme }) => ({
   fontSize: "24px",
   fontWeight: "bolder",
   paddingBottom: "29px",
-  color: theme.palette.primary.tan,
+  // color: theme.palette.primary.tan,
+  // color: theme.palette.primary.main,
+
   [theme.breakpoints.up("sm")]: {
     fontSize: "30px",
   },
@@ -82,22 +88,25 @@ export const StyledHeroTextHeader = styled(Typography)(({ theme }) => ({
 export const StyledHeroTextContent = styled(Typography)(({ theme }) => ({
   fontSize: "16px",
   maxWidth: "550px",
-  color: theme.palette.secondary.tan,
+  fontWeight: "450",
+  // color: theme.palette.secondary.tan,
+  // color: theme.palette.primary.main,
   [theme.breakpoints.up("sm")]: {
     fontSize: "20px",
   },
 }));
 
 export const StyledHeroButton = styled(Button)(({ theme }) => ({
-  color: theme.palette.secondary.main,
-  backgroundColor: theme.palette.secondary.tan,
+  color: theme.palette.secondary.tan,
+  backgroundColor: theme.palette.secondary.main,
   maxHeight: "55px",
   borderRadius: "40px",
   maxWidth: "250px",
   height: "75px",
+  textTransform: "capitalize",
   "&:hover": {
-    color: theme.palette.primary.main,
-    backgroundColor: theme.palette.primary.tan,
+    color: theme.palette.primary.tan,
+    backgroundColor: theme.palette.primary.main,
   },
 }));
 

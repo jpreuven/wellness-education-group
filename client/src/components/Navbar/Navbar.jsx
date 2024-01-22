@@ -17,7 +17,8 @@ export default function Navbar() {
           <Link
             style={{
               textDecoration: "none",
-              color: theme.palette.primary.main,
+              // color: theme.palette.primary.main,
+              color: theme.palette.primary.tan,
             }}
             to={"/"}
           >
@@ -35,7 +36,7 @@ export default function Navbar() {
         sx={{
           width: "100%",
           minHeight: "75px",
-          backgroundColor: "white",
+          background: `linear-gradient(to bottom, ${theme.palette.primary.main},${theme.palette.secondary.main})`,
           position: "sticky",
           top: 0,
           zIndex: 1,
@@ -56,7 +57,7 @@ export default function Navbar() {
           onClick={() => {
             SetChecked(!checked);
           }}
-          sx={{ fontSize: "20px" }}
+          sx={{ fontSize: "20px", color: theme.palette.primary.tan }}
         >
           &#9776;
         </InputLabel>

@@ -9,7 +9,8 @@ function schoolLogo() {
       height="100"
       viewBox="0 0 24 24"
       strokeWidth=".75"
-      stroke={theme.palette.primary.tan}
+      // stroke={theme.palette.primary.tan}
+      stroke={theme.palette.primary.main}
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -33,7 +34,8 @@ function lightBulbLogo() {
       height="100"
       viewBox="0 0 24 24"
       strokeWidth="1.1"
-      stroke={theme.palette.primary.tan}
+      // stroke={theme.palette.primary.tan}
+      stroke={theme.palette.primary.main}
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -55,7 +57,8 @@ function heartLogo() {
       height="100"
       viewBox="0 -1 24 24"
       strokeWidth=".75"
-      stroke={theme.palette.primary.tan}
+      // stroke={theme.palette.primary.tan}
+      stroke={theme.palette.primary.main}
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -74,7 +77,8 @@ function heartLogo2() {
       height="100"
       viewBox="0 0 24 24"
       strokeWidth=".75"
-      stroke={theme.palette.primary.tan}
+      // stroke={theme.palette.primary.tan}
+      stroke={theme.palette.primary.main}
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -95,7 +99,8 @@ function smileLogo() {
       height="100"
       viewBox="0 0 24 24"
       strokeWidth="1.1"
-      stroke={theme.palette.primary.tan}
+      // stroke={theme.palette.primary.tan}
+      stroke={theme.palette.primary.main}
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -118,7 +123,8 @@ function telephoneLogo() {
     //   height="95"
     //   viewBox="0 0 24 24"
     //   stroke-width="0.75"
-    //   stroke={theme.palette.primary.tan}
+    // stroke={theme.palette.primary.tan}
+    // stroke={theme.palette.primary.main}
     //   fill="none"
     //   stroke-linecap="round"
     //   stroke-linejoin="round"
@@ -133,7 +139,8 @@ function telephoneLogo() {
       height="95"
       viewBox="0 0 24 24"
       strokeWidth=".75"
-      stroke={theme.palette.primary.tan}
+      // stroke={theme.palette.primary.tan}
+      stroke={theme.palette.primary.main}
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -155,7 +162,8 @@ function humanLogo() {
       height="100"
       viewBox="0 0 24 24"
       strokeWidth="1.1"
-      stroke={theme.palette.primary.tan}
+      // stroke={theme.palette.primary.tan}
+      stroke={theme.palette.primary.main}
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"

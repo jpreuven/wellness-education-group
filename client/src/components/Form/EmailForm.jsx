@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { Grid, Link, TextareaAutosize, Typography } from "@mui/material";
+import theme from "../../theme/theme";
 
 const env = await import.meta.env;
 const SITE_KEY = env.VITE_SITE;
@@ -68,19 +69,23 @@ function EmailForm() {
       <Typography
         component={"h1"}
         varient={"h1"}
-        sx={{ fontSize: "24px", fontWeight: "500", textAlign: "center" }}
+        sx={{
+          fontSize: "24px",
+          fontWeight: "500",
+          textAlign: "center",
+          marginBottom: "10px",
+        }}
       >
         Email Form
       </Typography>
       <form
         onSubmit={handleSubmit}
-        style={{ display: "flex", flexDirection: "column" }}
+        style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
       >
         <Grid
           sx={{
             display: "flex",
-            // justifyContent: "space-between"
-            gap: "7rem",
+            gap: "2rem",
           }}
         >
           <Grid
@@ -123,7 +128,10 @@ function EmailForm() {
           </Grid>
         </Grid>
         <Grid
-          sx={{ display: "flex", justifyContent: "space-between", gap: "7rem" }}
+          sx={{
+            display: "flex",
+            gap: "2rem",
+          }}
         >
           <Grid
             sx={{ display: "flex", flexDirection: "column", flexGrow: "1" }}
@@ -135,7 +143,7 @@ function EmailForm() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              required
+              // required
               style={{
                 height: "50px",
                 borderRadius: "7px",
@@ -178,14 +186,20 @@ function EmailForm() {
             style={{ resize: "none", borderRadius: "7px" }}
           />
         </Grid>
-        <HCaptcha
-          sitekey={SITE_KEY} // Replace with your hCaptcha SITE_KEY
-          onVerify={(token) => handleCaptchaVerify(token)} // Set the captchaResponse state
-          theme="light" // Choose a theme (light or dark)
-          size="normal" // Choose a size (normal or compact)
-          tabIndex={0} // Tab index for accessibility
-        />
-        {captchaError && <p style={{ color: "red" }}>{captchaError}</p>}
+        <Grid>
+          <HCaptcha
+            sitekey={SITE_KEY} // Replace with your hCaptcha SITE_KEY
+            onVerify={(token) => handleCaptchaVerify(token)} // Set the captchaResponse state
+            theme="light" // Choose a theme (light or dark)
+            size="normal" // Choose a size (normal or compact)
+            tabIndex={0} // Tab index for accessibility
+          />
+          {captchaError && (
+            <p style={{ color: "red", fontSize: "16px", marginTop: 0 }}>
+              {captchaError}
+            </p>
+          )}
+        </Grid>
         <button type="submit">Send Email</button>
       </form>
     </Grid>

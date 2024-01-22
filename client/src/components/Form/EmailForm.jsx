@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { Grid, Link, TextareaAutosize, Typography } from "@mui/material";
 
 const env = await import.meta.env;
 const SITE_KEY = env.VITE_SITE;
@@ -63,64 +64,120 @@ function EmailForm() {
   };
 
   return (
-    <div>
-      <h2>Email Form</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="first_name">First Name:</label>
-          <input
-            type="text"
-            id="first_name"
-            name="first_name"
-            value={formData.first_name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="last_name">Last Name:</label>
-          <input
-            type="text"
-            id="last_name"
-            name="last_name"
-            value={formData.last_name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="subject">Subject:</label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
+    <Grid sx={{ width: "800px" }}>
+      <Typography
+        component={"h1"}
+        varient={"h1"}
+        sx={{ fontSize: "24px", fontWeight: "500", textAlign: "center" }}
+      >
+        Email Form
+      </Typography>
+      <form
+        onSubmit={handleSubmit}
+        style={{ display: "flex", flexDirection: "column" }}
+      >
+        <Grid
+          sx={{
+            display: "flex",
+            // justifyContent: "space-between"
+            gap: "7rem",
+          }}
+        >
+          <Grid
+            sx={{ display: "flex", flexDirection: "column", flexGrow: "1" }}
+          >
+            <label htmlFor="first_name">First Name:</label>
+            <input
+              type="text"
+              id="first_name"
+              name="first_name"
+              value={formData.first_name}
+              onChange={handleChange}
+              required
+              style={{
+                height: "50px",
+                borderRadius: "7px",
+                border: "1px solid gray",
+                outline: "none",
+              }}
+            />
+          </Grid>
+          <Grid
+            sx={{ display: "flex", flexDirection: "column", flexGrow: "1" }}
+          >
+            <label htmlFor="last_name">Last Name:</label>
+            <input
+              type="text"
+              id="last_name"
+              name="last_name"
+              value={formData.last_name}
+              onChange={handleChange}
+              required
+              style={{
+                height: "50px",
+                borderRadius: "7px",
+                border: "1px solid gray",
+                outline: "none",
+              }}
+            />
+          </Grid>
+        </Grid>
+        <Grid
+          sx={{ display: "flex", justifyContent: "space-between", gap: "7rem" }}
+        >
+          <Grid
+            sx={{ display: "flex", flexDirection: "column", flexGrow: "1" }}
+          >
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              style={{
+                height: "50px",
+                borderRadius: "7px",
+                border: "1px solid gray",
+                outline: "none",
+              }}
+            />
+          </Grid>
+          <Grid
+            sx={{ display: "flex", flexDirection: "column", flexGrow: "1" }}
+          >
+            <label htmlFor="subject">Subject:</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+              style={{
+                height: "50px",
+                borderRadius: "7px",
+                border: "1px solid gray",
+                outline: "none",
+              }}
+            />
+          </Grid>
+        </Grid>
+        <Grid sx={{ display: "flex", flexDirection: "column" }}>
           <label htmlFor="message">Message:</label>
-          <textarea
-            type="text"
+          <TextareaAutosize
+            label="Message"
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
             required
+            minRows={15}
+            maxRows={15}
+            style={{ resize: "none", borderRadius: "7px" }}
           />
-        </div>
+        </Grid>
         <HCaptcha
           sitekey={SITE_KEY} // Replace with your hCaptcha SITE_KEY
           onVerify={(token) => handleCaptchaVerify(token)} // Set the captchaResponse state
@@ -131,7 +188,7 @@ function EmailForm() {
         {captchaError && <p style={{ color: "red" }}>{captchaError}</p>}
         <button type="submit">Send Email</button>
       </form>
-    </div>
+    </Grid>
   );
 }
 

@@ -5,6 +5,7 @@ export const StyledServicesProvidedListOuterGrid = styled(Grid)(
   ({ theme }) => ({
     display: "flex",
     justifyContent: "space-evenly",
+    gap: "2rem",
   })
 );
 

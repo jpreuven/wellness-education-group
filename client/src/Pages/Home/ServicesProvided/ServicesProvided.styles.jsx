@@ -15,25 +15,12 @@ export const StyledServicesProvidedSectionContainer = styled(Container)(
     overflow: "visible",
     paddingBlock: "4rem",
     flexDirection: "column",
-    gap: "5rem",
-
-    // Tenatative //
+    gap: "3rem",
 
     [theme.breakpoints.up("md")]: {
       maxWidth: "1400px",
       paddingBlock: "6rem",
     },
-    //   [theme.breakpoints.up("lg")]: {
-    //     paddingBlock: "4rem",
-    //     minHeight: "650px",
-    //     alignItems: "center",
-    //   },
-    //   [theme.breakpoints.up("xl")]: {
-    //     minHeight: "650px",
-    //   },
-    //   [theme.breakpoints.up("xxl")]: {
-    //     minHeight: "850px",
-    //   },
   })
 );
 
@@ -42,5 +29,5 @@ export const StyledServicesProvidedOuterGrid = styled(Grid)(({ theme }) => ({
   flexDirection: "column",
   alignItems: "center",
   textAlign: "center",
-  gap: "3rem",
+  gap: "1.5rem",
 }));

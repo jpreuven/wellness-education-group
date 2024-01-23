@@ -15,8 +15,10 @@ export const StyledContactUsFooterSectionContainer = styled(Container)(
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    textAlign: "center",
     overflow: "visible",
     paddingBlock: "4rem",
+    fontSize: "20px",
     [theme.breakpoints.up("sm")]: {
       minHeight: "300px",
     },

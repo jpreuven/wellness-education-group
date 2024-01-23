@@ -12,7 +12,7 @@ function EmailForm() {
     first_name: "",
     last_name: "",
     email: "",
-    subject: "",
+    // subject: "",
     message: "",
     captcha_response: "",
   });
@@ -65,7 +65,15 @@ function EmailForm() {
   };
 
   return (
-    <Grid sx={{ width: "800px" }}>
+    <Grid
+      sx={{
+        width: "800px",
+        border: "1px solid gray",
+        borderRadius: "10px",
+        padding: "15px 30px",
+        boxShadow: "0px 2px 5px gray",
+      }}
+    >
       <Typography
         component={"h1"}
         varient={"h1"}
@@ -73,22 +81,24 @@ function EmailForm() {
           fontSize: "24px",
           fontWeight: "500",
           textAlign: "center",
-          marginBottom: "10px",
+          marginBottom: "25px",
         }}
       >
         Email Form
       </Typography>
       <Grid
-        sx={{
-          border: "1px solid gray",
-          borderRadius: "10px",
-          padding: "15px 30px",
-          boxShadow: "0px 2px 5px gray",
-        }}
+        sx={
+          {
+            // border: "1px solid gray",
+            // borderRadius: "10px",
+            // padding: "15px 30px",
+            // boxShadow: "0px 2px 5px gray",
+          }
+        }
       >
         <form
           onSubmit={handleSubmit}
-          style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
+          style={{ display: "flex", flexDirection: "column", gap: "2rem" }}
         >
           <Grid
             sx={{
@@ -108,8 +118,8 @@ function EmailForm() {
                 onChange={handleChange}
                 required
                 style={{
-                  height: "50px",
-                  fontSize: "20px",
+                  height: "40px",
+                  fontSize: "18px",
                   fontFamily: "Lora",
                   borderRadius: "7px",
                   border: "1px solid gray",
@@ -129,8 +139,8 @@ function EmailForm() {
                 onChange={handleChange}
                 required
                 style={{
-                  height: "50px",
-                  fontSize: "20px",
+                  height: "40px",
+                  fontSize: "18px",
                   fontFamily: "Lora",
                   borderRadius: "7px",
                   border: "1px solid gray",
@@ -143,6 +153,7 @@ function EmailForm() {
             sx={{
               display: "flex",
               gap: "2rem",
+              width: "calc(50% - 1rem)",
             }}
           >
             <Grid
@@ -157,8 +168,8 @@ function EmailForm() {
                 onChange={handleChange}
                 // required
                 style={{
-                  height: "50px",
-                  fontSize: "20px",
+                  height: "40px",
+                  fontSize: "18px",
                   fontFamily: "Lora",
                   borderRadius: "7px",
                   border: "1px solid gray",
@@ -166,7 +177,7 @@ function EmailForm() {
                 }}
               />
             </Grid>
-            <Grid
+            {/* <Grid
               sx={{ display: "flex", flexDirection: "column", flexGrow: "1" }}
             >
               <label htmlFor="subject">Subject:</label>
@@ -178,15 +189,15 @@ function EmailForm() {
                 onChange={handleChange}
                 required
                 style={{
-                  height: "50px",
-                  fontSize: "20px",
+                  height: "40px",
+                  fontSize: "18px",
                   fontFamily: "Lora",
                   borderRadius: "7px",
                   border: "1px solid gray",
                   outline: "none",
                 }}
               />
-            </Grid>
+            </Grid> */}
           </Grid>
           <Grid sx={{ display: "flex", flexDirection: "column" }}>
             <label htmlFor="message">Message:</label>
@@ -202,7 +213,7 @@ function EmailForm() {
               style={{
                 resize: "none",
                 borderRadius: "7px",
-                fontSize: "20px",
+                fontSize: "18px",
                 fontFamily: "Lora",
               }}
             />
@@ -243,7 +254,8 @@ function EmailForm() {
                   color: theme.palette.secondary.tan,
                   cursor: "pointer",
                   fontFamily: "Lora",
-                  height: "50px",
+                  fontSize: "16px",
+                  height: "40px",
                   width: "150px",
                 }}
                 type="submit"

@@ -78,130 +78,182 @@ function EmailForm() {
       >
         Email Form
       </Typography>
-      <form
-        onSubmit={handleSubmit}
-        style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
+      <Grid
+        sx={{
+          border: "1px solid gray",
+          borderRadius: "10px",
+          padding: "15px 30px",
+          boxShadow: "0px 2px 5px gray",
+        }}
       >
-        <Grid
-          sx={{
-            display: "flex",
-            gap: "2rem",
-          }}
+        <form
+          onSubmit={handleSubmit}
+          style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
         >
           <Grid
-            sx={{ display: "flex", flexDirection: "column", flexGrow: "1" }}
+            sx={{
+              display: "flex",
+              gap: "2rem",
+            }}
           >
-            <label htmlFor="first_name">First Name:</label>
-            <input
-              type="text"
-              id="first_name"
-              name="first_name"
-              value={formData.first_name}
+            <Grid
+              sx={{ display: "flex", flexDirection: "column", flexGrow: "1" }}
+            >
+              <label htmlFor="first_name">First Name:</label>
+              <input
+                type="text"
+                id="first_name"
+                name="first_name"
+                value={formData.first_name}
+                onChange={handleChange}
+                required
+                style={{
+                  height: "50px",
+                  fontSize: "20px",
+                  fontFamily: "Lora",
+                  borderRadius: "7px",
+                  border: "1px solid gray",
+                  outline: "none",
+                }}
+              />
+            </Grid>
+            <Grid
+              sx={{ display: "flex", flexDirection: "column", flexGrow: "1" }}
+            >
+              <label htmlFor="last_name">Last Name:</label>
+              <input
+                type="text"
+                id="last_name"
+                name="last_name"
+                value={formData.last_name}
+                onChange={handleChange}
+                required
+                style={{
+                  height: "50px",
+                  fontSize: "20px",
+                  fontFamily: "Lora",
+                  borderRadius: "7px",
+                  border: "1px solid gray",
+                  outline: "none",
+                }}
+              />
+            </Grid>
+          </Grid>
+          <Grid
+            sx={{
+              display: "flex",
+              gap: "2rem",
+            }}
+          >
+            <Grid
+              sx={{ display: "flex", flexDirection: "column", flexGrow: "1" }}
+            >
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                // required
+                style={{
+                  height: "50px",
+                  fontSize: "20px",
+                  fontFamily: "Lora",
+                  borderRadius: "7px",
+                  border: "1px solid gray",
+                  outline: "none",
+                }}
+              />
+            </Grid>
+            <Grid
+              sx={{ display: "flex", flexDirection: "column", flexGrow: "1" }}
+            >
+              <label htmlFor="subject">Subject:</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+                style={{
+                  height: "50px",
+                  fontSize: "20px",
+                  fontFamily: "Lora",
+                  borderRadius: "7px",
+                  border: "1px solid gray",
+                  outline: "none",
+                }}
+              />
+            </Grid>
+          </Grid>
+          <Grid sx={{ display: "flex", flexDirection: "column" }}>
+            <label htmlFor="message">Message:</label>
+            <TextareaAutosize
+              label="Message"
+              id="message"
+              name="message"
+              value={formData.message}
               onChange={handleChange}
               required
+              minRows={12}
+              maxRows={12}
               style={{
-                height: "50px",
+                resize: "none",
                 borderRadius: "7px",
-                border: "1px solid gray",
-                outline: "none",
+                fontSize: "20px",
+                fontFamily: "Lora",
               }}
             />
           </Grid>
           <Grid
-            sx={{ display: "flex", flexDirection: "column", flexGrow: "1" }}
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              width: "100%",
+            }}
           >
-            <label htmlFor="last_name">Last Name:</label>
-            <input
-              type="text"
-              id="last_name"
-              name="last_name"
-              value={formData.last_name}
-              onChange={handleChange}
-              required
-              style={{
-                height: "50px",
-                borderRadius: "7px",
-                border: "1px solid gray",
-                outline: "none",
-              }}
+            <HCaptcha
+              sitekey={SITE_KEY} // Replace with your hCaptcha SITE_KEY
+              onVerify={(token) => handleCaptchaVerify(token)} // Set the captchaResponse state
+              theme="light" // Choose a theme (light or dark)
+              size="normal" // Choose a size (normal or compact)
+              tabIndex={0} // Tab index for accessibility
             />
-          </Grid>
-        </Grid>
-        <Grid
-          sx={{
-            display: "flex",
-            gap: "2rem",
-          }}
-        >
-          <Grid
-            sx={{ display: "flex", flexDirection: "column", flexGrow: "1" }}
-          >
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              // required
-              style={{
-                height: "50px",
-                borderRadius: "7px",
-                border: "1px solid gray",
-                outline: "none",
+            {captchaError && (
+              <p style={{ color: "red", fontSize: "16px", marginTop: 0 }}>
+                {captchaError}
+              </p>
+            )}
+            <Grid
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
-            />
+            >
+              <button
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  border: "none",
+                  borderRadius: "10px",
+                  background: theme.palette.secondary.main,
+                  color: theme.palette.secondary.tan,
+                  cursor: "pointer",
+                  fontFamily: "Lora",
+                  height: "50px",
+                  width: "150px",
+                }}
+                type="submit"
+              >
+                Send Email!
+              </button>
+            </Grid>
           </Grid>
-          <Grid
-            sx={{ display: "flex", flexDirection: "column", flexGrow: "1" }}
-          >
-            <label htmlFor="subject">Subject:</label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-              style={{
-                height: "50px",
-                borderRadius: "7px",
-                border: "1px solid gray",
-                outline: "none",
-              }}
-            />
-          </Grid>
-        </Grid>
-        <Grid sx={{ display: "flex", flexDirection: "column" }}>
-          <label htmlFor="message">Message:</label>
-          <TextareaAutosize
-            label="Message"
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            minRows={15}
-            maxRows={15}
-            style={{ resize: "none", borderRadius: "7px" }}
-          />
-        </Grid>
-        <Grid>
-          <HCaptcha
-            sitekey={SITE_KEY} // Replace with your hCaptcha SITE_KEY
-            onVerify={(token) => handleCaptchaVerify(token)} // Set the captchaResponse state
-            theme="light" // Choose a theme (light or dark)
-            size="normal" // Choose a size (normal or compact)
-            tabIndex={0} // Tab index for accessibility
-          />
-          {captchaError && (
-            <p style={{ color: "red", fontSize: "16px", marginTop: 0 }}>
-              {captchaError}
-            </p>
-          )}
-        </Grid>
-        <button type="submit">Send Email</button>
-      </form>
+        </form>
+      </Grid>
     </Grid>
   );
 }

@@ -59,10 +59,10 @@ export default function Footer() {
               123 Main Street, Anytown, USA
             </Typography>
             <Typography variant="body2" color={theme.palette.primary.tan}>
-              Email: info@example.com
+              Email: blah@blah.com
             </Typography>
             <Typography variant="body2" color={theme.palette.primary.tan}>
-              Phone: +1 234 567 8901
+              Phone: (555) 555-5555
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>

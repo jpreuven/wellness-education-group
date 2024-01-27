@@ -2,11 +2,13 @@ import styled from "@emotion/styled";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 
 export const StyledFormOuterGrid = styled(Grid)(({ theme }) => ({
-  width: "800px",
-  border: "1px solid gray",
-  borderRadius: "10px",
-  padding: "15px 30px",
-  boxShadow: "0px 2px 5px gray",
+  maxWidth: "80dvw",
+  width: "80dvw",
+
+  "@media (min-width: 600px)": {
+    width: "95%",
+    maxWidth: "800px",
+  },
 }));
 
 export const StyledFormTypographyHeader = styled(Typography)(({ theme }) => ({
@@ -18,16 +20,36 @@ export const StyledFormTypographyHeader = styled(Typography)(({ theme }) => ({
 
 export const StyledFormOuterGridContentNames = styled(Grid)(({ theme }) => ({
   display: "flex",
+  flexDirection: "column",
   gap: "2rem",
+  [theme.breakpoints.up("sm")]: {
+    flexDirection: "row",
+  },
 }));
 export const StyledFormOuterGridContentEmail = styled(Grid)(({ theme }) => ({
-  display: "flex",
+  // display: "flex",
   gap: "2rem",
-  width: "calc(50% - 1rem)",
+  flexGrow: "1",
+  // width: "100%",
+  [theme.breakpoints.up("sm")]: {
+    width: "calc(50% - 1rem)",
+  },
 }));
 
 export const StyledFormInnerGridContent = styled(Grid)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   flexGrow: "1",
+}));
+
+export const StyledFormButtonCaptchaGrid = styled(Grid)(({ theme }) => ({
+  display: "flex",
+  width: "100%",
+  flexDirection: "column",
+  gap: "1rem",
+
+  [theme.breakpoints.up("sm")]: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
 }));

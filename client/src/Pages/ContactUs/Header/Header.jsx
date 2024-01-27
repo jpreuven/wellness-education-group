@@ -7,7 +7,10 @@ import {
 export default function Footer() {
   return (
     <StyledContactUsFooterBackgroundWrapper>
-      <StyledContactUsFooterSectionContainer>
+      <StyledContactUsFooterSectionContainer
+        component={"section"}
+        id={"contact-us-footer-section"}
+      >
         Have any questions? Feel free to reach out to us using the form below,
         or email us directly at blah@blah.com or click here.
       </StyledContactUsFooterSectionContainer>
